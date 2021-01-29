@@ -1,0 +1,56 @@
+$font-family:    'bookantiquaregular';
+$font-size: 14px;
+$primary-color: #3d2b07;
+$background-color: #e1d3b8;
+
+$border-color: #a69579;
+$th-color: #76644c;
+
+$h1-font-size: 30px;
+$h2-font-size: 25px;
+$h3-font-size: 20px;
+
+$h3-gradient-list: #ae8b51, #c9a86d, #e7c98f, #c9a86d, #ae8b51;
+
+@font-face {
+    font-family: 'bookantiquaregular';
+    src: url('../fonts/bookantiquaregular.eot');
+    src: url('../fonts/bookantiquaregular.eot') format('embedded-opentype'),
+         url('../fonts/bookantiquaregular.woff2') format('woff2'),
+         url('../fonts/bookantiquaregular.woff') format('woff'),
+         url('../fonts/bookantiquaregular.ttf') format('truetype'),
+         url('../fonts/bookantiquaregular.svg#bookantiquaregular') format('svg');
+}
+
+@font-face {
+    font-family: 'bookantiquabold';
+    src: url('../fonts/bookantiquabold.eot');
+    src: url('../fonts/bookantiquabold.eot') format('embedded-opentype'),
+         url('../fonts/bookantiquabold.woff2') format('woff2'),
+         url('../fonts/bookantiquabold.woff') format('woff'),
+         url('../fonts/bookantiquabold.ttf') format('truetype'),
+         url('../fonts/bookantiquabold.svg#bookantiquabold') format('svg');
+}
+
+@font-face {
+    font-family: 'bookantiquabolditalic';
+    src: url('../fonts/bookantiquabolditalic.eot');
+    src: url('../fonts/bookantiquabolditalic.eot') format('embedded-opentype'),
+         url('../fonts/bookantiquabolditalic.woff2') format('woff2'),
+         url('../fonts/bookantiquabolditalic.woff') format('woff'),
+         url('../fonts/bookantiquabolditalic.ttf') format('truetype'),
+         url('../fonts/bookantiquabolditalic.svg#bookantiquabolditalic') format('svg');
+}
+
+@font-face {
+    font-family: 'bookantiquaitalic';
+    src: url('../fonts/bookantiquaitalic.eot');
+    src: url('../fonts/bookantiquaitalic.eot') format('embedded-opentype'),
+         url('../fonts/bookantiquaitalic.woff2') format('woff2'),
+         url('../fonts/bookantiquaitalic.woff') format('woff'),
+         url('../fonts/bookantiquaitalic.ttf') format('truetype'),
+         url('../fonts/bookantiquaitalic.svg#bookantiquaitalic') format('svg');
+}
+
+
+

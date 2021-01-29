@@ -1,0 +1,83 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $primary-color;
+  background: #e1d3b8;
+  background: radial-gradient(circle, #e1d3b8 67%, #baaa90 100%);
+  background-size: 100%;
+  background-size: cover;
+  margin: 0 auto;
+  text-align: center;
+}
+
+select, button {
+  border: none;
+  background: transparent;
+  font-family: $font-family;
+  font-size: $font-size;
+}
+
+.number-container {
+  display: flex;
+  flex-direction: row;
+  
+  button {
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    svg {
+      width: 15px;
+      height: auto;
+      path {
+        color: red;
+      }
+    }
+    &:first-child{
+      //background: url("../assets/angle-left.svg");
+    }
+    &:last-child{
+      // background: url("../assets/angle-right.svg");
+    }
+  }
+}
+
+table, td, th {
+  border: $border-color solid 1px;
+  border-collapse: collapse;
+}
+
+th {
+  font-variant: small-caps;
+  color: $th-color;
+  border: none;
+  padding: 0px;
+}
+
+table {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+h3 {
+  @include gradient(90deg, $h3-gradient-list);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: $h3-font-size;
+  margin: 0 auto;
+  padding: 5px 0;
+}
+
+h1 {
+  @include gradient(90deg, $h3-gradient-list);
+  font-size: $h1-font-size;
+  //background: rgb(174,139,81);
+  //background: linear-gradient(90deg, rgba(174,139,81,1) 0%, rgba(201,168,109,1) 20%, rgba(231,201,143,1) 50%, rgba(201,168,109,1) 80%, rgba(174,139,81,1) 100%);
+}
+
+h2 {
+  font-size: $h2-font-size;
+}
