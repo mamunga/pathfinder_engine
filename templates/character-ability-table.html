@@ -1,0 +1,19 @@
+<table>
+    <thead>
+        <tr>
+            <th><h3>Ability Scores</h3></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>Base</th>
+            <th>Final</th>
+            <th>Modifier</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for stat in data.stats: %}
+            {% include 'character-ability.html' with context %}
+        {% endfor %}
+        <tr><td>Points</td><td>20</td></tr>
+    </tbody>
+</table>

@@ -1,0 +1,10 @@
+<tr>
+    <td>Alignment</td>
+    <td>
+        <select id="chacter-alignment">
+            {% for alignment in data['alignments'] : %}
+                <option>{{ alignment['name'] }}</option>
+            {% endfor %}
+        </select>
+    </td>
+</tr>

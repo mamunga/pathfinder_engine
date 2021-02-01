@@ -1,0 +1,10 @@
+<tr>
+    <td>Race</td>
+    <td>
+        <select id="chacter-race">
+            {% for race in data.races: %}
+                <option>{{ race.name }}</option>
+            {% endfor %}
+        </select>
+    </td>
+</tr>

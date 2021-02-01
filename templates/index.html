@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" />
-    </head>
-    <body>
 
-    <h1>h1</h1>
-    <h2>h2</h2>
-    <h3>h3</h3>
-<?php 
-    include("templates/header.php");
-    include("templates/character-info-table.php");
-    include("templates/character-ability-table.php");
-    include("templates/character-levels-table.php");
-    include("templates/character-skills-table.php");
-    include("templates/footer.php");
-?>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+
+<body>
+    {% include 'header.html' -%}
+    {% include 'character-info-table.html' with context -%}
+    {% include 'character-ability-table.html' with context -%}
+    {% include 'character-levels-table.html' with context -%}
+    {% include 'character-skills-table.html' with context -%}
+    {% include 'footer.html' -%}
 </body>
+
 </html>

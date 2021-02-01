@@ -1,0 +1,23 @@
+<table>
+    <thead>
+        <tr>
+            <th colspan="100%"><select>
+                {% for class in data.classes: %}
+                    <option>{{ class.name }}</option>
+                {% endfor %}
+            </select><button>^</button></th>
+        </tr>
+        <tr>
+            {% for i in range(1, 21): %}
+                <th>{{ i }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            {% for i in range(1, 21): %}
+                <td>lvl{{ i }} feats</td>
+            {% endfor %}
+        </tr>
+    </tbody>
+</table>
