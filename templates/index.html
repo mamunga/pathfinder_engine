@@ -6,12 +6,14 @@
 </head>
 
 <body>
-    {% include 'header.html' -%}
-    {% include 'character-info-table.html' with context -%}
-    {% include 'character-ability-table.html' with context -%}
-    {% include 'character-levels-table.html' with context -%}
-    {% include 'character-skills-table.html' with context -%}
-    {% include 'footer.html' -%}
+    <div class="container">
+        {% include 'header.html' -%}
+        {% include 'character-info-table.html' with context -%}
+        {% include 'character-ability-table.html' with context -%}
+        {% include 'character-levels-table.html' with context -%}
+        {% include 'character-skills-table.html' with context -%}
+        {% include 'footer.html' -%}
+    </div>
 </body>
 
 </html>

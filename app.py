@@ -15,8 +15,8 @@ for data_file in data_files:
 
 @app.route('/')
 def index():
-    print(data)
+    #print(data)
     return render_template('index.html', data=data)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

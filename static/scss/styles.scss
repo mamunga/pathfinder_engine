@@ -3,7 +3,7 @@
 
 body {
   font-family: $font-family;
-  font-size: $font-size;
+  font-size: $font-size-normal;
   color: $primary-color;
   background: #e1d3b8;
   background: radial-gradient(circle, #e1d3b8 67%, #baaa90 100%);
@@ -13,62 +13,136 @@ body {
   text-align: center;
 }
 
+.container {
+  margin: 0 auto;
+  width: 1300px;
+}
+
+.header {
+  font-size: $h1-font-size;
+  padding: 10px 0px;
+  background: #eab466 url('../assets/pathfinder-texture.png');
+  // border-image-source: linear-gradient(90deg, #eab466 0%, #ffe873 25%, #fffa78 50%, #ffe873 75%, #eab466 100%);
+  // border-image-slice: 1;
+  border: 3px solid #eab466;
+  color: #eab466;
+  border-width: 3px;
+  margin-bottom: 50px;
+}
+
 select, button {
   border: none;
   background: transparent;
   font-family: $font-family;
-  font-size: $font-size;
+  font-size: $font-size-normal;
 }
 
 .number-container {
   display: flex;
   flex-direction: row;
-  
+  align-items: center;
+  justify-content: center;
+
+  div {
+    text-align: center;
+    margin: 3px 10px;
+    width: 35px;
+		padding: 5px;
+		position: relative;
+		border: 2px solid;
+		border-width: 2px;
+		border-image-slice: 1;
+		border-image-source: linear-gradient(135deg, #faeca4 0%, #d6b164 50%, #bf964e 100%);
+		background: #efe8c4;
+    outline: 1px solid #cbb780;
+    font-size: $font-size-large;
+    font-weight: 800;
+    color: $number-container-font-color;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border: 1px solid #b0936d;
+      top: 0;
+      left: 0;
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+    }
+  }
+
   button {
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
     padding: 3px;
+    outline: none;
+    border: 3px solid #d6b164;
+    border-radius: 100%;
+    background: #4c4c47;
+    background: linear-gradient(0deg, #4c4c47 0%, #77756f 100%);
+    transition: all 0.3s;
     svg {
-      width: 15px;
-      height: auto;
-      path {
-        color: red;
+      width: auto;
+      height: 30px;
+      // fill: linear-gradient(135deg, rgba(250,236,164,1) 0%, rgba(214,177,100,1) 50%, rgba(191,150,78,1) 100%);
+      fill: #d6b164;
+      position: relative;
+      top: -4px;
+    }
+    &:first-child {
+      margin-left: 10px;
+      svg{
+        left: -1px;
       }
     }
-    &:first-child{
-      //background: url("../assets/angle-left.svg");
+    &:last-child {
+      margin-right: 10px;
+      svg{
+        left: 1px;
+      }
     }
-    &:last-child{
-      // background: url("../assets/angle-right.svg");
+    &:hover {
+      // border: 3px solid #aa9864;
+      background: #40403c;
+      background: linear-gradient(0deg, #40403c 0%, #5c5953 100%);    
     }
   }
 }
 
+.stat-final,
+.stat-modifier,
+.skill-total {
+  font-size: $font-size-large;
+}
+
 table, td, th {
-  border: $border-color solid 1px;
+  // border: $border-color solid 1px;
   border-collapse: collapse;
 }
 
 th {
   font-variant: small-caps;
   color: $th-color;
-  border: none;
+  // border: none;
+  border: 5px solid red;
   padding: 0px;
 }
 
 table {
-  width: 100%;
-  max-width: 1300px;
+  // width: 100%;
   margin: 0 auto;
 }
 
 h3 {
-  @include gradient(90deg, $h3-gradient-list);
+  //@include gradient(90deg, $h3-gradient-list);
+  background: linear-gradient(90deg, rgba(187,158,101,1) 0%, rgba(213,190,129,1) 15%, rgba(217,196,147,1) 26%,
+  rgba(213,190,129,1) 35%, rgba(193,162,100,1) 50%, rgba(213,190,129,1) 65%, rgba(216,194,142,1) 75%,
+  rgba(213,190,129,1) 85%, rgba(187,158,101,1) 100%);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: $h3-font-size;
-  margin: 0 auto;
+  margin: 0;
   padding: 5px 0;
+  color: $primary-color;
 }
 
 h1 {
@@ -80,4 +154,154 @@ h1 {
 
 h2 {
   font-size: $h2-font-size;
+  padding: 5px 0px;
+  background: rgb(234,180,102) url('../assets/pathfinder-texture.png');
+  border: 3px solid #eab466;
+  color: #eab466;
+  border-width: 3px;
+  margin: 30px auto 10px;
+
+  &.ability-title {
+    width: 430px;
+  }
+}
+
+.max-skill-value,
+.remaining-skill-points,
+.remaining-ability-points {
+  align-content: center;
+  align-items: center;
+  background: $circle-fill-color;
+  border-radius: 100%;
+  border: 3px solid $circle-border-color;
+  box-sizing: border-box;
+  color: #eace94;
+  display: flex;
+  font-size: $font-size-huge;
+  font-weight: 800;
+  height: 50px;
+  justify-content: center;
+  line-height: 1em;
+  margin: 0px auto 20px;
+  width: 50px;
+}
+
+.max-skill-value {
+  height: 30px;
+  width: 30px;
+  font-size: $font-size-large;
+}
+
+.ability-id {
+  color: $circle-fill-color;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: $font-size-large;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.ability-name {
+  color: $th-color;
+  text-align: right;
+  text-transform: uppercase;
+  font-size: $font-size-small;
+  margin: 0 10px;
+}
+
+.character-ability-table {
+  margin: 0px auto 20px;
+  border: 1px solid $border-color;
+  background: $table-background-color;
+  th {
+    min-width: 65px;
+
+    &:first-child {
+      text-align: right;
+      padding-right: 10px;
+    }
+  } 
+  th, td {
+    border: 1px solid $border-color;
+  }
+
+  .number-container div,
+  .stat-final,
+  .stat-modifier {
+    font-weight: 800;
+  }
+
+  tr {
+    &:nth-child(2) {
+      th {
+        &:first-child{
+          padding-right: 10px !important;
+        }
+      }
+    }
+  }
+
+  th {
+    padding: 0 !important;
+    
+    h3 {
+      padding: 0px;
+      text-align: center !important;
+    } 
+  }
+}
+
+.character-skill-table {
+  margin: 20px auto;
+  border: 1px solid $border-color;
+  background: $table-background-color;
+  th, td {
+    border: 1px solid $border-color;
+  }
+
+  tr {
+    &:nth-child(2) {
+      th {
+        &:first-child{
+          text-align: right;
+          padding-right: 10px !important;
+        }
+        &:nth-child(2) {
+          max-width: 50px;
+        }
+      }
+    }
+    td {
+      &:first-child {
+        text-align: right;
+        padding: 0 10px;
+        font-weight: 800;
+      }
+
+      &:nth-child(4) {
+        font-weight: 800;
+      }
+    }
+  }
+
+  th {
+    padding: 0 !important;
+    min-width: 50px;
+    
+    h3 {
+      padding: 0px;
+      text-align: center !important;
+    } 
+  }
+}
+
+
+.ability-point-title {
+  font-variant: small-caps;
+  font-size: $font-size-huge;
+}
+
+.skill-point-title {
+  font-variant: small-caps;
+  font-size: $font-size-huge;
 }

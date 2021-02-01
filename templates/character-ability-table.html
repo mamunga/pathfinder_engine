@@ -1,19 +1,26 @@
-<table>
+<h2 class="ability-title">Allocate Ability Scores</h2>
+<div class="ability-point-title">Ability points</div>
+<div class="remaining-ability-points">20</div>
+
+
+<table class="character-ability-table">
     <thead>
         <tr>
-            <th><h3>Ability Scores</h3></th>
+            <th colspan="4">
+                <h3>Ability Scores</h3>
+            </th>
         </tr>
         <tr>
-            <th></th>
+            <th>Ability</th>
             <th>Base</th>
             <th>Final</th>
             <th>Modifier</th>
         </tr>
     </thead>
     <tbody>
+
         {% for stat in data.stats: %}
-            {% include 'character-ability.html' with context %}
+        {% include 'character-ability.html' with context %}
         {% endfor %}
-        <tr><td>Points</td><td>20</td></tr>
     </tbody>
 </table>
