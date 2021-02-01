@@ -1,5 +1,0 @@
-BAB progression újraszámolása, ha a class egy szinten megváltozik
-Stat választások hozzáadása a final statokhoz
-Adott szinthez tartozó statok kiszámolása (kell hozzá: stat választások hozzáadása a final statokhoz)
-Skill point progression kiszámolása (kell hozzá: adott szinthez tartozó statok kiszámolása)
-    classes.json-ba kell az infó a számolásról
