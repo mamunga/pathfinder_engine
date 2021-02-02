@@ -1,6 +1,6 @@
 <h2 class="ability-title">Allocate Ability Scores</h2>
 <div class="ability-point-title">Ability points</div>
-<div class="remaining-ability-points">20</div>
+<div class="remaining-ability-points">25</div>
 
 
 <table class="character-ability-table">
@@ -18,8 +18,7 @@
         </tr>
     </thead>
     <tbody>
-
-        {% for stat in data.stats: %}
+        {% for ability in data.abilities: %}
         {% include 'character-ability.html' with context %}
         {% endfor %}
     </tbody>

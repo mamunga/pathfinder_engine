@@ -108,8 +108,8 @@ select, button {
   }
 }
 
-.stat-final,
-.stat-modifier,
+.ability-final,
+.ability-modifier,
 .skill-total {
   font-size: $font-size-large;
 }
@@ -161,7 +161,7 @@ h2 {
   border-width: 3px;
   margin: 30px auto 10px;
 
-  &.ability-title {
+  &.ability-title,  &.skill-title {
     width: 430px;
   }
 }
@@ -226,8 +226,8 @@ h2 {
   }
 
   .number-container div,
-  .stat-final,
-  .stat-modifier {
+  .ability-final,
+  .ability-modifier {
     font-weight: 800;
   }
 

@@ -4,7 +4,7 @@ import os
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
-data_files = ['alignments.json', 'classes.json', 'races.json', 'stats.json', 'skills.json']
+data_files = ['alignments.json', 'classes.json', 'races.json', 'abilities.json', 'skills.json']
 data = dict()
 
 for data_file in data_files:
@@ -17,6 +17,10 @@ for data_file in data_files:
 def index():
     #print(data)
     return render_template('index.html', data=data)
+
+@app.route('/static/data/all.json')
+def json_data():
+    return data
 
 if __name__ == '__main__':
     app.run(debug=True)
