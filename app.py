@@ -12,15 +12,16 @@ for data_file in data_files:
     data = {**data, **(json.load(open(json_url)))}
 
 
-
 @app.route('/')
 def index():
-    #print(data)
+    # print(data)
     return render_template('index.html', data=data)
+
 
 @app.route('/static/data/all.json')
 def json_data():
     return data
+
 
 if __name__ == '__main__':
     app.run(debug=True)
